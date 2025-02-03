@@ -1,0 +1,398 @@
+/* Navigation */
+html, body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* 부모 요소가 높이를 채우도록 */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 로고와 링크 사이 공간 배분 */
+    align-items: center; /* 수직 정렬 */
+    padding: 10px 20px; /* 네비게이션 바의 여백 */
+    background-color: #e0ebff; /* 배경색 */
+}
+
+/* 네비게이션 링크 스타일 */
+.nav-link {
+    display: flex; /* 가로 정렬 */
+    list-style: none; /* 기본 목록 스타일 제거 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 각 링크의 스타일 */
+.nav-link li {
+    margin: 0 15px; /* 링크 간 간격 */
+}
+
+.nav-link a, .logo a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #333; /* 텍스트 색상 */
+    font-size: 18px;
+    transition: color 0.3s ease; /* 색상 변경 효과 */
+}
+
+.nav-link a:hover, .logo a:hover {
+    color: #ffffff; /* 마우스 올렸을 때 색상 변경 */
+}
+
+/* 클릭 후 색상이 변하지 않도록 설정 */
+.nav-link a:active,
+.logo a:active {
+    color: #333; /* 원래 색상으로 유지 */
+}
+
+/* Home image */
+.main-emoji
+{
+    display: flex;
+    flex-direction: row; /* 가로로 나뉘도록 설정 */
+    height: calc(80vh - 60px); /* 화면 높이에서 navbar 높이를 제외한 값 */
+    margin-left: 20%;
+}
+
+.right-emoji, .left-intro {
+    flex: 1; /* 같은 비율로 공간 나눔 */
+    display: flex; /* 내부 콘텐츠 정렬을 위한 설정 */
+    flex-direction: column; /* 텍스트 또는 이미지가 세로로 쌓임 */
+    align-items: center; /* 가로 방향 중앙 정렬 */
+    justify-content: center; /* 세로 방향 중앙 정렬 */
+}
+
+.right-emoji img {
+    max-width: 100%; /* 이미지 크기를 부모 크기에 맞게 */
+    max-height: 80%; /* 너무 커지지 않도록 높이 제한 */
+    object-fit: contain; /* 이미지 비율 유지 */
+}
+
+.left-intro
+{
+    font-family: 'Roboto Mono', monospace;
+    text-align: left;
+}
+
+/* slide text */
+.container 
+{
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 2px 2px 4px    rgba(79, 79, 79, 0.3); /* 텍스트 그림자 */
+    width: 300px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.slide-text 
+{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: slide 9s infinite;
+    text-align: center; /* 슬라이드 텍스트 중앙 정렬 */
+}
+
+.slide-text:nth-child(1) 
+{
+    animation-delay: 0s;
+}
+
+.slide-text:nth-child(2) 
+{
+    animation-delay: 3s;
+}
+
+.slide-text:nth-child(3) 
+{
+    animation-delay: 6s;
+}
+
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    36% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+}
+
+/* slide emoji */
+.right-emoji 
+{
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-image
+{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: slide 9s infinite;
+}
+
+.slide-image:nth-child(1) 
+{
+    animation-delay: 0s;
+}
+
+.slide-image:nth-child(2) 
+{
+    animation-delay: 3s;
+}
+
+.slide-image:nth-child(3) 
+{
+    animation-delay: 6s;
+}
+
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    36% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+}
+
+/* About Me */
+.main-AboutMe
+{
+    text-align: center;
+    color: gray;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: x-large;
+}
+
+.decorate
+{
+    display: inline-block; /* 텍스트가 박스 안에 나타나도록 */
+    padding: 5px 10px; /* 박스 안의 여백 */
+    border: 2px solid #e5e5e5; /* 박스의 테두리 */
+    background-color: #f0f0f0; /* 박스의 배경색 */
+    font-size: 16px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    border-radius: 8px; /* 테두리 둥글게 */
+    color: #333; /* 텍스트 색상 */
+}
+
+
+/* Project */
+.main-Project
+{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-container {
+    display: flex; /* 나란히 배치되도록 설정 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    gap: 20px; /* 두 박스 사이의 간격 */
+    margin-top: 20px; /* 프로젝트 섹션과 간격 */
+}
+
+.project
+{
+    width: 200px;  /* 고정된 너비 */
+    height: 120px; /* 고정된 높이 */
+    display: block;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    display: inline-block; /* 텍스트가 박스 안에 나타나도록 */
+    padding: 5px 10px; /* 박스 안의 여백 */
+    border: 2px solid #e5e5e5; /* 박스의 테두리 */
+    background-color: #f0f0f0; /* 박스의 배경색 */
+    font-size: 16px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    border-radius: 8px; /* 테두리 둥글게 */
+    color: #333; /* 텍스트 색상 */
+}
+
+.project h4, .box h5, .box h6 {
+    margin: 10px 0; /* 각 요소에 간격 추가 */
+}
+
+.project h5 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project h5 a:hover {
+    color: #0073e6; /* 링크 hover 효과 */
+}
+
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.project-item a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+
+/* Resume */
+h3
+{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+h4
+{
+    margin-left: 50px;
+    color: rgb(44, 44, 44);
+}
+
+h5
+{
+    margin-left: 55px;
+    color: rgb(83, 83, 83);
+}
+
+.skills h4 
+{
+    margin-left: 50px;
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills .percentage {
+    font-weight: bold;
+    color: #999999;
+}
+
+.skills {
+    max-width: 600px;
+    margin: left;
+    margin-left: 50px;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between; /* 요소를 한 줄에 배치 */
+    align-items: center; /* 수직 정렬 */
+    margin: 10px 0; /* 각 줄 간격 */
+    padding: 5px 10px;
+    background-color: #9fd0ff; /* 배경색 추가 */
+    border: 1px solid #97ccfd; /* 테두리 */
+    border-radius: 5px;
+}
+
+.skill-item h4 {
+    margin: 0; /* 불필요한 여백 제거 */
+    flex: 1; /* 기술 이름에 더 많은 공간 할당 */
+}
+
+.skill-item span {
+    margin: 0 10px; /* 요소 간격 조정 */
+    flex: 0.5; /* 균형 잡힌 공간 분배 */
+    text-align: right; /* 텍스트 정렬 */
+}
+
+.percentage {
+    font-weight: bold;
+    color: #ffffff;;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #8dc6fc;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #ffffff;
+    width: 0;
+    transition: width 1s ease;
+}
+
+
+/* footer */
+
+.link-for-resume
+{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.link-for-resume a {
+    text-decoration: none; /* 밑줄 제거 */
+    display: inline-block; /* 이미지를 블록 요소처럼 취급 */
+    margin: 0 10px; /* 링크 사이 간격 조정 */
+}
+
+.link-for-resume a img
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+footer
+{
+    text-align: center;
+    margin-top: 50px;
+}

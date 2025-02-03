@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhyun Jeong - Portfolio</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h1 class="logo">
+            <a href="#home">Suhyun Jeong</a>
+        </h1>
+        <ul class="nav-link">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#AboutMe">AboutMe</a></li>
+            <li><a href="#Project">Project</a></li>
+            <li><a href="#Resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="Home" class="main-emoji">
+        <div class= "right-emoji"> 
+            <div class="slide-image"><img src="../image/heartFace - Copy.JPG" alt = "heartFace"></div>
+            <div class="slide-image"><img src="../image/celeFace.JPG" alt="celeFace"></div>
+            <div class="slide-image"><img src="../image/wbody.JPG" alt="wbody"></div>
+        </div>
+        <div class="left-intro"> 
+            <p>Hello, I can be a<br></p>
+            <div class="container">
+                <div class="slide-text"> Software developer</div>
+                <div class="slide-text"> Data analysist</div>
+                <div class="slide-text"> Web developer</div>
+            </div>
+        </div>      
+    </section>
+
+    <section id="AboutMe" class="fullpage">
+        <div class="main-AboutMe">
+            <br><br><br><br>
+            I am currently a <span class="decorate">student at QUT🎓</span>. 
+            After majoring in biology, I worked at a 🧬sequencing company where I developed an interest in <span class="decorate">data analysis</span>, which led me to start an IT developer course. 
+            I have acquired skills in both frontend and backend development and am interested in building web applications with a focus on user experience. 
+            I am currently utilizing <span class="decorate">data analysis tools (Python)</span> and <span class="decorate">web development technologies (HTML, CSS, JavaScript, etc.)</span> to solve problems and optimize based on data.
+            My goal is to integrate data analysis and web development to build efficient web applications and provide business insights through data.
+        </div>
+    </section>
+
+    <section id="Project" class="fullpage">
+        <div class="main-Project">
+            <br><br><br><br>
+            <h1>GitHub Repositories</h1>
+            <div id="project-list"></div> <!-- 여기에 레포지토리 목록이 표시됩니다 -->
+            <script src="../script/script.js"></script>
+            <script src="../script/project.js"></script>
+        </div>
+    </section>
+
+    <section id="Resume" class="fullpage">
+        <div class="main">
+            <br><br><br><br>
+            <h3>Summary</h3>
+            <h4>Sue's,which is Suhyun Jeong, resume page includes his degree, skill, career, and career history, skills, publications, etc., such as presentations and remarkable achievements.</h4>
+            <h4>B.O.D.: 25. Aug. 1989</h4>
+            <h3> Education</h3>
+            <h4>Master of Science, Cha University in Korea</h4>
+            <h5>Graduated at Feb. 2015</h5>
+            <h4>Master of IT, Queensland University of Technology</h4>
+            <h5>Graduate will be July, 2015</h5>
+            <h3>Skill</h3>
+            <div class="skills">
+                <div class = "skill-item">
+                    <h4>C#</h4>
+                    <span>Beginner</span> 
+                    <span class="percentage" data-target="40">0%</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%;"></div>
+                    </div>
+                </div>
+        
+                <div class = "skill-item">
+                    <h4>Python</h4>
+                    <span>Beginner</span>
+                    <span class="percentage" data-target="60">0%</span></h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+                
+                <div class = "skill-item">
+                    <h4>HTML and CSS</h4>
+                    <span>Beginner</span>
+                    <span class="percentage" data-target="80">0%</span></h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+        
+                <div class = "skill-item">
+                    <h4>JavaScript</h4>
+                    <span>Beginner</span>
+                    <span class="percentage" data-target="70">0%</span></h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+        
+                <div class = "skill-item">
+                    <h4>React</h4>
+                    <span>Beginner</span>
+                    <span class="percentage" data-target="70">0%</span></h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <h3>publication</h3>
+            <h4>Title: Yeast-based assays for characterization of the functional effects of single nucleotide polymorphisms in human DNA repair genes</h4>
+            <h4>Published Date:'March.2018' <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0193823">Click Here To link</a></h4>
+        </div> 
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="link-for-resume">
+            <h1>Contect Me :) </h1>
+            <a href = "https://github.com/SuhyunSue"> <img src="../image/github.png"> </a>
+            <a href = "https://www.instagram.com/daily_89_25/"> <img src="../image/instagram.png"></a>
+            <a href = "https://www.linkedin.com/in/suhyun-jeong-4b0631235/"> <img src = "../image/linkedin.png"></a>
+        </div>
+        <br>
+        Copyright © 2025 Suhyun Jeong. All rights reserved.
+        <br>
+        <br>
+        <br>
+    </footer>
+
+    <script src="../script/Main.js"></script>
+</body>
+</html>
