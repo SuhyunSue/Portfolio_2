@@ -11,11 +11,6 @@ This project shows a basic webpage that is designed only with HTML and CSS. I ho
 2. Open the home.html file in your preferred web browser.
 3. Customize the HTML and CSS files as needed to fit your requirements.
 
-## Screenshots
-Below is a preview of the webpage:
-
-<img width="1083" alt="image" src="https://github.com/user-attachments/assets/f13e04cc-36b9-456c-9d5a-ed82852e5793" />
-
 ## Tools Used
 - HTML5
 - CSS3
