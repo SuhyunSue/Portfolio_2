@@ -27,6 +27,26 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+const topBtn = document.getElementById("topBtn");
+
+// 스크롤 시 버튼 표시/숨김
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+
+// 버튼 클릭 시 맨 위로 스크롤
+topBtn.onclick = function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
+
 //function from Resume.html
 document.addEventListener('DOMContentLoaded', () => {
     const skills = document.querySelectorAll('.skill-item');
@@ -85,17 +105,21 @@ async function fetchRepositories() {
 
 // 레포지토리 목록 표시
 function displayRepositories(repos) {
-    repos.forEach((repo) => {
-        const listItem = document.createElement('div');
-        listItem.className = 'project-item';
-        listItem.innerHTML = `
-            <h4>${repo.name}</h4>
-            <p>${repo.description || 'No description available'}</p>
-            <a href="${repo.html_url}" target="_blank">View Repository</a>
-        `;
-        projectList.appendChild(listItem);
-    });
+  const colors = ['#c8e5ff', '#acd8ff']; // 원하는 색상 배열
+
+  repos.forEach((repo, index) => {
+      const listItem = document.createElement('div');
+      listItem.className = 'project-item';
+      listItem.style.backgroundColor = colors[index % colors.length]; // 색상 순환 적용
+      listItem.innerHTML = `
+          <h4>${repo.name}</h4>
+          <p>${repo.description || 'No description available'}</p>
+          <a href="${repo.html_url}" target="_blank"> View Repository </a>
+      `;
+      projectList.appendChild(listItem);
+  });
 }
+
 
 // 페이지 로드 시 실행
 document.addEventListener('DOMContentLoaded', fetchRepositories);
