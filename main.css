@@ -392,9 +392,9 @@ footer
 
 .follow-button {
     position: fixed;
-    bottom: 40px;  // 화면 하단에서 20px 위에 위치
-    right: 30px;   // 화면 오른쪽에서 20px 왼쪽에 위치
-    z-index: 9999; // 다른 요소들 위에 표시되도록 함
+    bottom: 40px;  /* 화면 하단에서 20px 위에 위치 */
+    right: 30px;   /* 화면 오른쪽에서 20px 왼쪽에 위치 */
+    z-index: 9999; /* 다른 요소들 위에 표시되도록 함 */
   }
 
   
