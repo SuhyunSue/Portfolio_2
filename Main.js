@@ -70,16 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const id = setInterval(frame, 20);
     };
   
-    const skillobserver = new IntersectionObserver((entries) => {
+    const skillObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           animateSkill(entry.target);
-          skillobserver.unobserve(entry.target);
+          skillObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.5 });
     
-    skills.forEach(skill => observer.observe(skill));
+    skills.forEach(skill => skillObserver.observe(skill));
   });
 
 // GitHub API URL
