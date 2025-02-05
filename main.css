@@ -296,7 +296,7 @@ h5
 }
 
 .skills {
-    max-width: 600px;
+    max-width: 1000px;
     margin: left;
     margin-left: 80px;
 }
@@ -313,8 +313,8 @@ h5
 }
 
 .skill-item h4 {
-    margin: 0; /* 불필요한 여백 제거 */
-    flex: 1; /* 기술 이름에 더 많은 공간 할당 */
+    margin: 2; /* 불필요한 여백 제거 */
+    flex: 2; /* 기술 이름에 더 많은 공간 할당 */
 }
 
 .skill-item span {
