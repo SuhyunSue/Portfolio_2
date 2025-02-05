@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const id = setInterval(frame, 20);
     };
   
-    const observer = new IntersectionObserver((entries) => {
+    const skillobserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           animateSkill(entry.target);
-          observer.unobserve(entry.target);
+          skillobserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.5 });
