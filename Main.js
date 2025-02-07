@@ -121,3 +121,31 @@ function displayRepositories(repos) {
       projectList.appendChild(listItem);
   });
 }
+
+// 화면 크기에 따른 동적 조정 로직
+window.addEventListener('resize', function() {
+// 화면 크기에 따른 동적 조정 로직
+const windowWidth = window.innerWidth;
+if (windowWidth <= 768) {
+// 모바일 화면에 대한 로직
+document.body.style.fontSize = '14px';
+// 모바일용 레이아웃 조정
+} else if (windowWidth <= 1024) {
+// 태블릿 화면에 대한 로직
+document.body.style.fontSize = '16px';
+// 태블릿용 레이아웃 조정
+} else {
+// 데스크톱 화면에 대한 로직
+document.body.style.fontSize = '18px';
+// 데스크톱용 레이아웃 조정
+}
+});
+// 성능 최적화를 위한 디바운싱 적용
+let resizeTimer;
+window.addEventListener('resize', function() {
+clearTimeout(resizeTimer);
+resizeTimer = setTimeout(function() {
+// 여기에 위의 동적 조정 로직을 넣습니다
+}, 250);
+});
+

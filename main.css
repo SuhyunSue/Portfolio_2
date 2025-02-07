@@ -423,3 +423,9 @@ footer
       margin: 0 auto;
     }
   }
+
+  .img_responsive {
+    width: 100%;
+    height: auto;
+  }
+  
